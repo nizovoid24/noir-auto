@@ -6,7 +6,7 @@ export default function Philosophy() {
       <div className="philosophy__layout section-container">
         <SectionReveal as="figure" className="philosophy__image">
           <img
-            src="/images/noir-studio-interior.png"
+            src={`${import.meta.env.BASE_URL}images/noir-studio-interior.png`}
             alt="Пространство детейлинг-студии: геометрия потолочного света, красные акценты и отражения на тёмном полу"
             width={1672}
             height={941}

@@ -16,7 +16,7 @@ export default function BeforeAfter() {
           </div>
         </SectionReveal>
         <SectionReveal>
-          <BeforeAfterSlider beforeSrc="/images/noir-before.png" afterSrc="/images/noir-after.png" />
+          <BeforeAfterSlider beforeSrc={`${import.meta.env.BASE_URL}images/noir-before.png`} afterSrc={`${import.meta.env.BASE_URL}images/noir-after.png`} />
         </SectionReveal>
       </div>
     </section>

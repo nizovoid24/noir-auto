@@ -48,3 +48,11 @@ node --test tests/configurator.test.mjs
 Hero → 01 Philosophy → 02 Services → 03 Before/After → 04 Process → 05 Detailing Configurator → Final CTA → Footer. PROCESS содержит четыре этапа; финальный CTA ведёт к услугам, футер — к существующим разделам.
 
 Новые компоненты: src/sections/Process.tsx, src/sections/FinalCta.tsx, src/components/SiteFooter.tsx. Стили: src/styles/completion.css. Финальный CTA повторно использует исходный кадр Porsche без изменения PNG. Контакты и действующая запись не предусмотрены.
+
+## Публикация на GitHub Pages
+
+Сайт: https://nizovoid24.github.io/noir-auto/
+
+Отправка изменений в `main` запускает `.github/workflows/deploy.yml`: установка зависимостей из lock-файла, TypeScript, тесты конфигуратора, сборка и публикация `dist`. На GitHub в Settings → Pages выбран источник GitHub Actions.
+
+Production-сборка использует базовый путь `/noir-auto/`; локальная разработка — `/`. Пути изображений в React используют `import.meta.env.BASE_URL`, пути шрифтов и HTML-ресурсов преобразует Vite. Для другого имени репозитория или собственного домена обновите `base` в `vite.config.ts`. Демонстрационный статус и `noindex/nofollow` сохранены.

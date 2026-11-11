@@ -5,7 +5,7 @@ export default function FinalCta() {
     <section className="content-section final-cta" id="final-cta" aria-labelledby="final-cta-title" tabIndex={-1}>
       <div className="section-container final-cta__layout">
         <SectionReveal className="final-cta__image">
-          <img src="/images/noir-porsche-master.png" alt="Чёрный Porsche 911 GT3 RS в сдержанном красном свете студии" width={1672} height={941} loading="lazy" decoding="async" />
+          <img src={`${import.meta.env.BASE_URL}images/noir-porsche-master.png`} alt="Чёрный Porsche 911 GT3 RS в сдержанном красном свете студии" width={1672} height={941} loading="lazy" decoding="async" />
         </SectionReveal>
         <SectionReveal className="final-cta__copy" delay={0.12}>
           <h2 className="section-title" id="final-cta-title" lang="en">PERFECTION<br />IS A CHOICE</h2>

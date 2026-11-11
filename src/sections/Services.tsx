@@ -27,7 +27,7 @@ export default function Services() {
             <SectionReveal key={service.image} delay={(index % columns) * 0.11}>
               <article className="service-card" aria-labelledby={`service-${index + 1}`}>
                 <div className="service-card__image">
-                  <img src={`/images/${service.image}`} alt={service.alt} width={1448} height={1086} loading="lazy" decoding="async" />
+                  <img src={`${import.meta.env.BASE_URL}images/${service.image}`} alt={service.alt} width={1448} height={1086} loading="lazy" decoding="async" />
                 </div>
                 <div className="service-card__body">
                   <span className="service-card__number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>

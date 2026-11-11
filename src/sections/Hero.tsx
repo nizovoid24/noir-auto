@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="hero__visual" data-image-state={imageFailed ? 'error' : imageSettled ? 'loaded' : 'loading'}>
           <motion.img
             className="hero__car"
-            src="/images/noir-porsche-master.png"
+            src={`${import.meta.env.BASE_URL}images/noir-porsche-master.png`}
             alt="Чёрный Porsche 911 GT3 RS в студии с красным светом и отражениями на полу"
             width={1672}
             height={941}
