@@ -5,8 +5,9 @@
 ## Запуск
 
 ```bash
-cd "/Users/dmitrij61/Desktop/KALLISTO/NOIR AUTO"
-npm install
+git clone https://github.com/nizovoid24/noir-auto.git
+cd noir-auto
+npm ci
 npm run dev
 ```
 
