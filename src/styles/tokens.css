@@ -1,0 +1,33 @@
+/* NOIR AUTO — foundational design tokens */
+:root {
+  color-scheme: dark;
+  --color-obsidian: #09090b;
+  --color-crimson: #c91620;
+  --color-steel: #b7b7bd;
+  --color-graphite: #27272c;
+  --color-paper: #f4f4f5;
+  --color-background: var(--color-obsidian);
+  --color-surface: var(--color-graphite);
+  --color-text: var(--color-paper);
+  --color-text-muted: var(--color-steel);
+  --color-accent: var(--color-crimson);
+  --color-focus: var(--color-steel);
+  --font-body: 'Manrope', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+  --text-small: 0.75rem;
+  --text-body: 1rem;
+  --text-display: clamp(3.5rem, 10vw, 6rem);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --page-gutter: clamp(1.25rem, 4vw, 4rem);
+  --content-max: 90rem;
+  --duration-fast: 160ms;
+  --duration-base: 240ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,54 @@
+html { scroll-behavior: smooth; }
+.content-section { padding-block: clamp(80px, 9vw, 144px); scroll-margin-top: 24px; }
+.section-container { width: min(100% - 2 * var(--page-gutter), var(--content-max)); margin-inline: auto; }
+.section-title { font-family: var(--font-display); font-size: clamp(2.75rem, 4.5vw, 4.5rem); font-weight: 600; letter-spacing: -0.025em; line-height: 1.02; }
+.section-index { display: flex; align-items: center; gap: var(--space-6); margin-bottom: var(--space-8); color: var(--color-steel); font-family: var(--font-display); font-size: 1rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.section-index__line { width: 48px; height: 1px; background: var(--color-crimson); }
+.philosophy__layout { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: clamp(32px, 6vw, 96px); }
+.philosophy__image { margin: 0; overflow: hidden; background: var(--color-graphite); }
+.philosophy__image img { width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; object-position: 53% center; }
+.philosophy__copy { min-width: 0; }
+.philosophy__text { max-width: 44ch; margin-top: var(--space-8); color: var(--color-steel); font-size: clamp(0.9375rem, 1.2vw, 1.0625rem); line-height: 1.9; }
+.services { border-top: 1px solid var(--color-graphite); padding-top: clamp(64px, 7vw, 112px); }
+.services__heading { margin-bottom: clamp(40px, 5vw, 72px); }
+.services__heading .section-title { max-width: 18ch; }
+.services__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(40px, 4vw, 64px) 24px; }
+.services__grid > .section-reveal { min-width: 0; }
+.service-card { height: 100%; }
+.service-card__image { position: relative; overflow: hidden; background: var(--color-graphite); }
+.service-card__image img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 650ms var(--ease-out); }
+.service-card__image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--color-crimson); transform: scaleX(0); transform-origin: left; transition: transform 320ms var(--ease-out); }
+.service-card__body { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 12px 14px; padding-top: 24px; }
+.service-card__number { padding-top: 2px; color: var(--color-steel); font-family: var(--font-display); font-size: 1rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.service-card h3 { font-size: clamp(1rem, 1.35vw, 1.1875rem); font-weight: 600; line-height: 1.5; text-wrap: pretty; }
+.service-card p { grid-column: 2; color: var(--color-steel); font-size: 0.875rem; line-height: 1.8; }
+/* Header navigation only: Hero photography, layout and entrance remain unchanged. */
+.site-nav { gap: clamp(16px, 3vw, 48px); }
+a.site-nav__link { text-decoration: none; }
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover .service-card__image img { transform: scale(1.035); }
+  .service-card:hover .service-card__image::after { transform: scaleX(1); }
+  a.site-nav__link:hover { color: var(--color-steel); }
+}
+@media (max-width: 1100px) { .services__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) {
+  .philosophy__layout { grid-template-columns: 1fr; gap: var(--space-12); }
+  .philosophy__image img { aspect-ratio: 16 / 10; }
+  .philosophy__copy { max-width: 640px; }
+  .philosophy__text { max-width: 52ch; }
+  .section-title { font-size: clamp(2.75rem, 6vw, 4rem); }
+  .site-header { gap: 16px; }
+}
+@media (max-width: 600px) {
+  .services__grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .site-nav { gap: 16px; font-size: 0.6875rem; }
+  .site-nav__about { display: none; }
+  .content-section { scroll-margin-top: 16px; }
+  .section-index { margin-bottom: 24px; }
+  .philosophy__text { margin-top: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .section-reveal { opacity: 1 !important; transform: none !important; }
+  .service-card__image img, .service-card__image::after { transition: none; transform: none !important; }
+}
