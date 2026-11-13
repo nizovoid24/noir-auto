@@ -20,7 +20,7 @@ export default function SiteFooter() {
             {footerLinks.map((link) => <a href={link.href} key={link.href}>{link.text}</a>)}
           </nav>
         </div>
-        <p className="site-footer__disclaimer">Демонстрационный проект KALLISTO IT-AGENCY. Не является действующим коммерческим предложением.</p>
+        <p className="site-footer__disclaimer">NOIR AUTO — демонстрационный проект. Не является действующим коммерческим предложением.</p>
       </div>
     </footer>
   )

@@ -5,7 +5,7 @@ import '../styles/hero.css'
 
 const ease = [0.16, 1, 0.3, 1] as const
 const messages = {
-  about: 'NOIR AUTO — демонстрационный проект KALLISTO IT-AGENCY. Студия представлена как концепция для портфолио.',
+  about: 'NOIR AUTO — концепция студии автомобильного детейлинга. Демонстрационный проект.',
 }
 
 export default function Hero() {
@@ -43,7 +43,7 @@ export default function Hero() {
         </div>
         <div className="hero__copy">
           <motion.div className="hero__heading" initial={reduceMotion ? false : { opacity: 0, y: 20 }} animate={{ opacity: show ? 1 : 0, y: show ? 0 : 20 }} transition={enter(0.7)}>
-            <h1 id="hero-title" tabIndex={-1} lang="en">PRECISION<span>IS AN ART<span className="hero__period">.</span></span></h1>
+            <h1 id="hero-title" tabIndex={-1} lang="en">PRECISION<span>IS AN ART<span className="hero__period"></span></span></h1>
             <p className="hero__description">Внимание к каждой детали.<br />Искусство сохранять совершенство.</p>
           </motion.div>
           <motion.div className="hero__actions" initial={reduceMotion ? false : { opacity: 0, y: 12 }} animate={{ opacity: show ? 1 : 0, y: show ? 0 : 12 }} transition={enter(1.2)}>
@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
       </div>
       <footer className="hero__footer">
-        <p>Демонстрационный проект <span lang="en">KALLISTO IT-AGENCY</span></p>
+        <p>Демонстрационный проект</p>
         <p className="hero__model" lang="en">PORSCHE <span>911 GT3 RS</span></p>
       </footer>
       <div className="hero-notice" role="status" aria-live="polite" aria-atomic="true">
